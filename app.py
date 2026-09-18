@@ -57,3 +57,6 @@ async def get_device(name: str):
         status_code=404,
         detail="No device called " + name
     )
+@app.get("/stats")
+async def get_stats():
+    return {"average_temperature": average_temp(readings)}
