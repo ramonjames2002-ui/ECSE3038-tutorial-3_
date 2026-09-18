@@ -27,6 +27,8 @@ def hottest(devices):
     return hottest_device
 
 print(average_temp(readings))
+
+
 print(hottest(readings))
 
 @app.get("/devices")
@@ -60,3 +62,6 @@ async def get_device(name: str):
 @app.get("/stats")
 async def get_stats():
     return {"average_temperature": average_temp(readings)}
+
+print(hottest(readings))
+
