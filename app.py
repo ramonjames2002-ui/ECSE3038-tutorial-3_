@@ -29,6 +29,6 @@ def hottest(devices):
 print(average_temp(readings))
 print(hottest(readings))
 
-@app.get("/readings/devices")
+@app.get("/devices")
 async def get_devices():
     return readings
